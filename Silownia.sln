@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silownia", "Silownia\Silownia.csproj", "{C263D3A9-D1A1-42D9-8A11-F2D7C07CF53A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silownia.Tests", "Silownia.Tests\Silownia.Tests.csproj", "{EC368BD1-AAC6-4BD0-8341-E31216541AF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C263D3A9-D1A1-42D9-8A11-F2D7C07CF53A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C263D3A9-D1A1-42D9-8A11-F2D7C07CF53A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C263D3A9-D1A1-42D9-8A11-F2D7C07CF53A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C263D3A9-D1A1-42D9-8A11-F2D7C07CF53A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC368BD1-AAC6-4BD0-8341-E31216541AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC368BD1-AAC6-4BD0-8341-E31216541AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC368BD1-AAC6-4BD0-8341-E31216541AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC368BD1-AAC6-4BD0-8341-E31216541AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6E60094-E9B9-4302-ADA4-1C4B980BB297}
+	EndGlobalSection
+EndGlobal

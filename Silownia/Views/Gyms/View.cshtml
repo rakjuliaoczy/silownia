@@ -1,0 +1,17 @@
+﻿@model Silownia.Models.DbModels.Gym
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+@Html.DisplayNameFor(model => model.GymId)
+@Html.DisplayFor(model => model.GymId)
+@Html.DisplayNameFor(model => model.GymName)
+@Html.DisplayFor(model => model.GymName)
+
+<p>
+    @Html.ActionLink("Edytuj", "Edit", new { id = Model.GymId }) |
+    @Html.ActionLink("Wróć do listy", "ViewAll")
+</p>
