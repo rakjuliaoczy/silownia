@@ -18,7 +18,11 @@ namespace Silownia.Models.DbModels
             this.GymName = gymName;
             this.Adress = adress;
         }
+
+   
     }
 
     public enum GymName { BeFit, SuperSport }
+
+
 }

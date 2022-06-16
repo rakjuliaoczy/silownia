@@ -1,0 +1,36 @@
+﻿@model Silownia.Models.DbModels.Schedule
+
+<div>
+    <h4>Schedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Class.Coach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class.Coach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateFinish)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateFinish)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ScheduleId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Silownia.Models.DbModels.Schedule>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Class.ClassType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Class.Coach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateFinish)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>
+                @Html.DisplayFor(modelItem => item.Class.ClassType)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class.Coach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateFinish)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ScheduleId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ScheduleId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ScheduleId }) |
+                @Html.ActionLink("Zapisz się", "Register", new { id = item.ScheduleId })
+            </td>
+        </tr>
+    }
+
+</table>

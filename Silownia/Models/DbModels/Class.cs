@@ -33,5 +33,5 @@ namespace Silownia.Models.DbModels
 
 
     }
-    public enum ClassType { Yoga, Batata }
+    public enum ClassType { Yoga, Pilates, Tabata, Zumba, Sztangi, Twerk, Trampoliny }
 }

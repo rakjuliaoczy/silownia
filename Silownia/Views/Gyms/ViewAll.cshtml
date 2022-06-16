@@ -21,19 +21,20 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.GymName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Adress)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.GymId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.GymId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.GymId })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.GymName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Adress)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.GymId }) |
+        @Html.ActionLink("Sprawdź to!", "Details") |
+        @Html.ActionLink("Delete", "Delete", new { id = item.GymId })
+    </td>
+    
+</tr>
 }
 
 </table>

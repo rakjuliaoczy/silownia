@@ -16,6 +16,12 @@ namespace Silownia.Controllers
         {
             return View();
         }
+
+        public ActionResult Details()
+        {
+            return RedirectToAction("Index", "Classes");
+        }
+
         [HttpGet]
         public ActionResult Create()
         {
@@ -104,5 +110,7 @@ namespace Silownia.Controllers
 
             return RedirectToAction("ViewAll");
         }
+
+
     }
 }
