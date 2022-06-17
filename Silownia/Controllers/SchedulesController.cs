@@ -37,10 +37,15 @@ namespace Silownia.Controllers
             return View(schedule);
         }
 
-        //[Authorize]
+        [AllowAnonymous]
         public ActionResult Register()
         {
-            return RedirectToAction("Create", "Client");
+            
+                return RedirectToAction("Create", "Client");
+           // if(User.IsInRole("Admin"))
+               // return RedirectToAction("Create", "Client");
+           // return View();
+
         }
 
         // GET: Schedules/Create

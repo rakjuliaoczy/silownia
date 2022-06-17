@@ -22,7 +22,7 @@ namespace Silownia.Models.DbModels
    
     }
 
-    public enum GymName { BeFit, SuperSport }
+    public enum GymName { BeFit, SuperSport, Monkeys, Manilla, ThePowerest }
 
 
 }

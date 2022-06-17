@@ -175,7 +175,6 @@ C:\Users\Dom\Desktop\silownia\Silownia\bin\pl\System.Web.Razor.resources.dll
 C:\Users\Dom\Desktop\silownia\Silownia\bin\pl\System.Web.WebPages.resources.dll
 C:\Users\Dom\Desktop\silownia\Silownia\bin\pl\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Dom\Desktop\silownia\Silownia\bin\pl\System.Web.WebPages.Razor.resources.dll
-C:\Users\Dom\Desktop\silownia\Silownia\obj\Debug\Silownia.csproj.AssemblyReference.cache
 C:\Users\Dom\Desktop\silownia\Silownia\obj\Debug\Silownia.Migrations.First.resources
 C:\Users\Dom\Desktop\silownia\Silownia\obj\Debug\Silownia.csproj.GenerateResource.cache
 C:\Users\Dom\Desktop\silownia\Silownia\obj\Debug\Silownia.csproj.CoreCompileInputs.cache

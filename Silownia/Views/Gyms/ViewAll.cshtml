@@ -1,40 +1,93 @@
 ﻿@model IEnumerable<Silownia.Models.DbModels.Gym>
 
 @{
-    ViewBag.Title = "ViewAll";
+    ViewBag.Title = "GymFreaks";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ViewAll</h2>
+<style>
+    h2 {
+        justify-content: center;
+        color: deeppink;
+    }
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.GymName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Adress)
-        </th>
-        <th></th>
-    </tr>
+    .landing-page {
+        height: 100%;
+        width: 100%;
+        margin-top: 10px;
+        position: absolute;
+        top: 41px;
+        left: 0;
+    }
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.GymName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Adress)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.GymId }) |
-        @Html.ActionLink("Sprawdź to!", "Details") |
-        @Html.ActionLink("Delete", "Delete", new { id = item.GymId })
-    </td>
-    
-</tr>
-}
+    .background {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        float: left;
+        margin-top: 0;
+        padding-top: 0;
+    }
+</style>
 
-</table>
+<script>
+      var tablica = new Array(1, 2, 3, 4);
+      var random = 0;
+      function zamien() {
+        document.getElementById("obrazek").src =
+          "images/img" + tablica[random] + ".jpg";
+        if (random == 3) {
+          random = 0;
+        } else {
+          random++;
+        }
+      }
+
+      setInterval(zamien, 2000);
+</script>
+
+<div class="landing-page">
+    <img class="background" id="obrazek" src="images/img1.jpg" />
+</div>
+
+<div style="margin-top: 1020px">
+    <h2>Nasze siłownie</h2><br /><br />
+
+    <table class="table">
+        <tr>
+            <th>
+                Siłownia
+            </th>
+            <th>
+                Adres
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GymName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adress)
+                </td>
+                <td>
+                    <!--  Html.ActionLink("Edit", "Edit", new { id = item.GymId }) |-->
+                    <button class="btn btn-primary mx-2" style="background-color: lightskyblue; color: white">@Html.ActionLink("Sprawdź to!", "Details")</button>
+                    <!-- Html.ActionLink("Delete", "Delete", new { id = item.GymId }) -->
+                </td>
+
+            </tr>
+        }
+
+    </table>
+
+    <p>
+        <!--Html.ActionLink("Create New", "Create") -->
+    </p>
+</div>
+

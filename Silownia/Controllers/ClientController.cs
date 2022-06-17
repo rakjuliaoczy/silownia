@@ -20,6 +20,16 @@ namespace Silownia.Controllers
             var clients = db.Clients.Include(c => c.Gym);
             return View(clients.ToList());
         }
+
+        public ActionResult Details()
+        {
+            return RedirectToAction("Index", "Classes");
+        }
+
+        public ActionResult DetailsSchedule()
+        {
+            return RedirectToAction("Index", "Schedules");
+        }
         [HttpGet]
         public ActionResult Create()
         {

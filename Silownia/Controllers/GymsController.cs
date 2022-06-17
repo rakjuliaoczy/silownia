@@ -47,7 +47,7 @@ namespace Silownia.Controllers
         {
             List<Gym> gyms;
             using (DatabaseContext db = new DatabaseContext())
-                gyms = db.Gyms.ToList();
+                gyms = db.Gyms.OrderBy(gym => gym.GymName).ToList();
             return View(gyms);
         }
 

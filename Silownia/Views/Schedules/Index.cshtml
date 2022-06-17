@@ -2,54 +2,57 @@
 
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Grafik";
 }
 
-<h2>Index</h2>
+<h2 style="color:deeppink">Grafik</h2><br />
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <!--Html.ActionLink("Create New", "Create")-->
 </p>
 <table class="table">
     <tr>
+      
 
         <th>
-            @Html.DisplayNameFor(model => model.Class.ClassType)
+            Rodzaj zajęć
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Class.Coach)
+            Trener
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DateStart)
+            Czas rozpoczęcia
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DateFinish)
+            Czas zakończenia
         </th>
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <th>
-                @Html.DisplayFor(modelItem => item.Class.ClassType)
-            </th>
-            <td>
-                @Html.DisplayFor(modelItem => item.Class.Coach)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateStart)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateFinish)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ScheduleId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ScheduleId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ScheduleId }) |
-                @Html.ActionLink("Zapisz się", "Register", new { id = item.ScheduleId })
-            </td>
-        </tr>
-    }
+<tr>
+    
+    <th>
+        @Html.DisplayFor(modelItem => item.Class.ClassType)
+    </th>
+    <td>
+        @Html.DisplayFor(modelItem => item.Class.Coach)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateStart)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateFinish)
+    </td>
+    <td>
+        <!--Html.ActionLink("Edit", "Edit", new { id = item.ScheduleId }) |-->
+        <!--Html.ActionLink("Details", "Details", new { id = item.ScheduleId }) |-->
+           <!-- Html.ActionLink("Delete", "Delete", new { id = item.ScheduleId }) |-->
+        <button class="btn btn-primary mx-2" style="background-color: lightskyblue; color: white">
+        @Html.ActionLink("Zapisz się!", "Register", new { id = item.ScheduleId })</button>
+</td>
+    </tr>
+        }
 
-</table>
+    </table>

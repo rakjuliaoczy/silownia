@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Silownia.Models;
@@ -16,22 +17,40 @@ namespace Silownia.Controllers
         private DatabaseContext db = new DatabaseContext();
 
         // GET: Classes
-        public ActionResult Index()
+        /*public ActionResult Index(string coach)
+        {
+            //var classes = db.Classes.Include(a => a.Client);
+            var classes = from s in db.Classes select s;
+            if (!String.IsNullOrEmpty(coach))
+            {
+                db.Classes = (DbSet<Class>)db.Classes.Where(s => s.Coach.ToUpper().Contains(coach.ToUpper()));
+
+            }
+            return View(classes.ToList());
+        }*/
+
+        public ActionResult Index(string searchString)
         {
             var classes = db.Classes.Include(a => a.Client);
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                classes = classes.Where(s => s.ClassType.ToString().Contains(searchString));
+            }
+
             return View(classes.ToList());
         }
-
+        
         public ActionResult DetailsSchedule()
         {
         
             return RedirectToAction("Index", "Schedules");
         }
 
-        // GET: Classes
-        public ActionResult ShowSearchForm()
+        // GET: ShowSearchForm
+        public ActionResult ShowSearchForm(string search)
         {
-            return View();
+            return View(db.Classes.Where(x => x.Coach.Contains(search) || search==null).ToList());
         }
 
         // GET: Classes/Details/5
